@@ -31,10 +31,10 @@ app.configure('production', function(){
 var TaskList = require('./routes/tasklist');
 
 //Windows Mongo deployed through 10gen Package
-// var taskList = new TaskList('mongodb://Administrator:password@168.62.36.133/Mongo');
+var taskList = new TaskList('mongodb://Administrator:password@168.62.36.133/Mongo');
 
 // Linux Mongo as a Virtual Machine
-var taskList = new TaskList('mongodb://Administrator:password@168.62.161.164/mongo');
+// var taskList = new TaskList('mongodb://Administrator:password@168.62.161.164/mongo');
 
 
 app.get('/', taskList.showTasks.bind(taskList));
